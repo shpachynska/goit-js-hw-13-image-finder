@@ -1,11 +1,29 @@
-<ul class='gallery'>
+<ul class='gallery js-results-container'>
   {{#each this}}
     <li>
-      <img src='{{webformatURL}}' alt='' width='480' />
-      <p>likes: {{likes}}</p>
-      <p>views: {{views}}</p>
-      <p>comments: {{comments}}</p>
-      <p>downloads: {{downloads}}</p>
+      <div class='photo-card'>
+        <img src='{{webformatURL}}' alt='{{tags}}' />
+
+        <div class='stats'>
+          <p class='stats-item'>likes:
+            {{likes}}
+            <i class='material-icons'></i>
+
+          </p>
+          <p class='stats-item'>views:
+            {{views}}
+            <i class='material-icons'></i>
+          </p>
+          <p class='stats-item'>comments:
+            {{comments}}
+            <i class='material-icons'></i>
+          </p>
+          <p class='stats-item'>downloads:
+            {{downloads}}
+            <i class='material-icons'></i>
+          </p>
+        </div>
+      </div>
     </li>
   {{/each}}
 </ul>
