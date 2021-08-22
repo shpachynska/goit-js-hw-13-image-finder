@@ -79,8 +79,3 @@ function renderImages(withLoadMoreBtn, images) {
 function clearImageContainer() {
   refs.resultsContainer.innerHTML = '';
 }
-
-// refs.loadMoreBtn.scrollIntoView({
-//   behavior: 'smooth',
-//   block: 'end',
-// });
