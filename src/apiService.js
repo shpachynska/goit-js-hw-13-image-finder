@@ -4,10 +4,10 @@ export default class ApiService {
     this.page = 1;
   }
 
-  fetchImages() {
+  async fetchImages() {
     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=22998776-fe1d89aff15cc96b76b12cb7b`;
 
-    return fetch(url)
+    return await fetch(url)
       .then(response => response.json())
       .then(data => {
         this.page += 1;
@@ -19,12 +19,4 @@ export default class ApiService {
   resetPage() {
     this.page = 1;
   }
-
-  //   get query() {
-  //     return this.searchQuery;
-  //   }
-
-  //   set query(newQuery) {
-  //     this.searchQuery = newQuery;
-  //   }
 }

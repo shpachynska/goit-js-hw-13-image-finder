@@ -46,6 +46,10 @@ function onSearch(e) {
 
 function onLoadMoreClick() {
   apiService.fetchImages().then(appendImageMarkup);
+  refs.loadMoreBtn.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+  });
 }
 
 function appendImageMarkup(hits) {
@@ -76,7 +80,7 @@ function clearImageContainer() {
   refs.resultsContainer.innerHTML = '';
 }
 
-refs.loadMoreBtn.scrollIntoView({
-  behavior: 'smooth',
-  block: 'end',
-});
+// refs.loadMoreBtn.scrollIntoView({
+//   behavior: 'smooth',
+//   block: 'end',
+// });
