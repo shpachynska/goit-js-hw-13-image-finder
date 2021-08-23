@@ -21,9 +21,6 @@ const apiService = new ApiService();
 refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', onLoadMoreClick);
 
-const query = apiService.searchQuery;
-console.log(query);
-
 function onSearch(e) {
   e.preventDefault();
   clearImageContainer();
