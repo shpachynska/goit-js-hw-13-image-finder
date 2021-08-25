@@ -43,10 +43,6 @@ function onSearch(e) {
 
 function onLoadMoreClick() {
   apiService.fetchImages().then(appendImageMarkup);
-  refs.loadMoreBtn.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-  });
 }
 
 function appendImageMarkup(hits) {
@@ -61,6 +57,10 @@ function appendImageMarkup(hits) {
     });
   } else if (hits.length >= 12) {
     renderImages(true, hits);
+    refs.loadMoreBtn.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+    });
   } else {
     renderImages(false, hits);
   }
